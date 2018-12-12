@@ -16,7 +16,7 @@
         <TextView
             android:id="@+id/fullname"
             android:layout_width="match_parent"
-            android:text="Adı Soyadı"
+            android:text="Nome Sobrenome"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
             android:gravity="left|center"
@@ -33,12 +33,12 @@
             android:layout_below="@+id/userPic"
             android:layout_alignStart="@+id/userPic"
             android:layout_alignEnd="@+id/fullname"
-            android:hint="Paylaşmak için yazmaya başlayın..."/>
+            android:hint="Comece a digitar para compartilhar ..."/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="İptal"
+            android:text="Cancelamento"
             android:id="@+id/cancelButton"
             android:layout_below="@+id/editTextNewPost"
             android:layout_toStartOf="@+id/button3" />
@@ -46,7 +46,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Paylaş"
+            android:text="Ação"
             android:id="@+id/buttonShare"
             android:layout_alignBottom="@+id/cancelButton"
             android:layout_alignParentEnd="true" />
@@ -54,7 +54,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fotoğraf Ekle"
+        android:text="Adicionar fotos"
         android:id="@+id/button4"
         android:layout_below="@+id/editTextNewPost"
         android:layout_alignParentLeft="true"/>

@@ -24,7 +24,7 @@
     <TextView
         android:id="@+id/reportDetail"
         android:layout_width="wrap_content"
-        android:text="Rapor eden userID : 1234\nRapor eden kullanıcı : Adı Soyadı\nRapor edilen postID : 1234\nRapor edilen gönderi içeriği: 'gönderi 1234 gönderi'\nRapor edilme nedeni : Spam"
+                android:text="Reportar userID : 1234\nReportador : Nome sobrenome\nReportado postID: 1234\nConteúdo denunciado: 'Enviar 1234 submeter'\nRazão para relatar : Spam"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:gravity="left|center"
@@ -37,7 +37,7 @@
     <TextView
         android:id="@+id/notification_time"
         android:layout_width="wrap_content"
-        android:text="39 dk önce rapor edildi."
+        android:text="Reportado há 39 minutos"
         android:layout_marginRight="5dp"
         android:layout_marginTop="2dp"
         android:gravity="left|center"
@@ -48,7 +48,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gönderiyi Sil"
+        android:text="Excluir postagem"
         android:textColor="#FF0000"
         android:layout_alignParentRight="true"
         android:layout_below="@id/reportDetail"
@@ -57,7 +57,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gönderiyi Görüntüle"
+        android:text="Ver Post"
         android:textColor="#000080"
         android:layout_below="@id/reportDetail"
         style="@style/Widget.AppCompat.Button.Borderless"

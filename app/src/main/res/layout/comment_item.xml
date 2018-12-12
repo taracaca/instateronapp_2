@@ -45,7 +45,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="3 saat önce"
+        android:text="2 horas atras"
         android:id="@+id/postedTime"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
@@ -54,7 +54,7 @@
 <TextView
     android:id="@+id/post_content"
     android:layout_width="match_parent"
-    android:text="çok iyi!"
+    android:text="Muito bom!"
     android:textSize="18sp"
     android:textColor="#000"
     android:layout_marginStart="10dp"

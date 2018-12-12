@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Yetki alanınızda rapor edilmiş gönderi bulunmamaktadır."
+        android:text="Não há posts informados na jurisdição."
         android:id="@+id/noreportedpoststext"
         android:gravity="center"
         android:visibility="gone"

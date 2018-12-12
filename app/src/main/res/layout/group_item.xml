@@ -33,7 +33,7 @@
     <TextView
         android:id="@+id/fullname"
         android:layout_width="wrap_content"
-        android:text="Grup İsmi"
+        android:text="Nome do grupo"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:gravity="left|center"
@@ -46,7 +46,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Yönet"
+        android:text="Gerir"
         android:textColor="#000080"
         android:layout_alignParentRight="true"
 
@@ -57,7 +57,7 @@
         android:layout_width="match_parent"
         android:gravity="center"
         android:layout_height="wrap_content"
-        android:text="Bu grubun yöneticisisiniz."
+        android:text="Você é o gerente deste grupo."
         android:textColor="#BB0000"
         android:id="@+id/adminOfGroupText"
         android:layout_below="@id/groupPic"/>

@@ -49,7 +49,7 @@ public class APIRequest {
         params.put("email", email);
         params.put("password", password);
         final ProgressDialog[] progress = new ProgressDialog[1];
-        client.post("http://www.dogaozkaraca.com/izu_network/API.php",params, new JsonHttpResponseHandler() {
+        client.post("localhost/Servidor_Instaterona/API.php",params, new JsonHttpResponseHandler() {
 
             @Override
             public void onStart() {
@@ -61,20 +61,20 @@ public class APIRequest {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject object)
             {
-                Log.w("izuNetwork", object.toString());
+                Log.w("InstaMaromba", object.toString());
                 try {
                     JSONArray resultArray = (JSONArray) object.get("result");
                     String result = (String) resultArray.get(0);
-                    Log.w("izuNetwork",result);
+                    Log.w("InstaMaromba",result);
                     if (result.equalsIgnoreCase("API Request is empty!"))
                     {
                         //Logged in already!
 
                         APIRequest.logout(ct);
                         final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ct);
-                        alertDialogBuilder.setTitle("Hata!");
-                        alertDialogBuilder.setMessage("Lütfen tekrar giriş yapın!");
-                        alertDialogBuilder.setPositiveButton("Tamam", new DialogInterface.OnClickListener() {
+                        alertDialogBuilder.setTitle("Erro!");
+                        alertDialogBuilder.setMessage("Por favor, faça o login novamente!");
+                        alertDialogBuilder.setPositiveButton("okay", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                             }
@@ -91,7 +91,7 @@ public class APIRequest {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray array) {
                 // called when response HTTP status is "200 OK"
-                Log.w("izuNetwork", array.toString());
+                Log.w("InstaMaromba", array.toString());
 
                 try {
                     JSONObject user = array.getJSONObject(0);
@@ -122,9 +122,9 @@ public class APIRequest {
                     //Then access denied is returned.
                     // e.printStackTrace();
                     final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ct);
-                    alertDialogBuilder.setTitle("Hata!");
-                    alertDialogBuilder.setMessage("E-mail yada parola hatalı!");
-                    alertDialogBuilder.setPositiveButton("Tamam", new DialogInterface.OnClickListener() {
+                    alertDialogBuilder.setTitle("Erro!");
+                    alertDialogBuilder.setMessage("E-mail ou a senha está incorreta!");
+                    alertDialogBuilder.setPositiveButton("okay", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                         }
@@ -158,7 +158,7 @@ public class APIRequest {
         RequestParams params = new RequestParams();
         params.put("functionname","logout");
         final ProgressDialog[] progress = new ProgressDialog[1];
-        client.post("http://www.dogaozkaraca.com/izu_network/API.php",params, new JsonHttpResponseHandler() {
+        client.post("localhost/Servidor_Instaterona/API.php",params, new JsonHttpResponseHandler() {
 
             @Override
             public void onStart() {
@@ -170,7 +170,7 @@ public class APIRequest {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject object)
             {
-                Log.w("izuNetwork", object.toString());
+                Log.w("InstaMaromba", object.toString());
                 progress[0].dismiss();
                 SharedPreferences.Editor editor = ct.getSharedPreferences("user", ct.MODE_PRIVATE).edit();
                 editor.putInt("userID", -99);
@@ -187,7 +187,7 @@ public class APIRequest {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray array) {
                 // called when response HTTP status is "200 OK"
-                Log.w("izuNetwork", array.toString());
+                Log.w("InstaMaromba", array.toString());
                 try {
 
 
@@ -200,7 +200,7 @@ public class APIRequest {
             public void onFailure(int statusCode, Header[] headers,String error, Throwable e) {
                 // called when response HTTP status is "4XX" (eg. 401, 403, 404)
                 progress[0].dismiss();
-                Log.w("izuNetwork", "error:logout");
+                Log.w("InstaMaromba", "error:logout");
 
             }
 
@@ -223,7 +223,7 @@ public class APIRequest {
         params.put("userID",userID);
 
         final ProgressDialog[] progress = new ProgressDialog[1];
-        client.post("http://www.dogaozkaraca.com/izu_network/API.php",params, new JsonHttpResponseHandler() {
+        client.post("localhost/Servidor_Instaterona/API.php",params, new JsonHttpResponseHandler() {
 
             @Override
             public void onStart() {
@@ -236,7 +236,7 @@ public class APIRequest {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject object)
             {
-                Log.w("izuNetworkO", object.toString());
+                Log.w("InstaMaromba", object.toString());
                 ArrayList<FeedItem> feed = new ArrayList<>();
 
                 try {
@@ -301,7 +301,7 @@ public class APIRequest {
         params.put("userID",userID);
 
         final ProgressDialog[] progress = new ProgressDialog[1];
-        client.post("http://www.dogaozkaraca.com/izu_network/API.php",params, new JsonHttpResponseHandler() {
+        client.post("localhost/Servidor_Instaterona/API.php",params, new JsonHttpResponseHandler() {
 
             @Override
             public void onStart() {
@@ -314,7 +314,7 @@ public class APIRequest {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject object)
             {
-                Log.w("izuNetworkO", object.toString());
+                Log.w("InstaMaromba", object.toString());
                 ArrayList<FeedItem> feed = new ArrayList<>();
 
                 try {
@@ -332,10 +332,10 @@ public class APIRequest {
                         SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                         Date inputDate = fmt.parse(item.getString("postDate"));
                         long postDateTime = inputDate.getTime();
-                        Log.w("izuNetwork","pdt: "+postDateTime);
+                        Log.w("InstaMaromba","pdt: "+postDateTime);
 
                         String ago = timeOps.getTimeAgo(postDateTime);
-                        Log.w("izuNetwork","ago: "+ago);
+                        Log.w("InstaMaromba","ago: "+ago);
                         int likeCount = Integer.parseInt(item.getString("likeCount"));
                         int dislikeCount = Integer.parseInt(item.getString("dislikeCount"));
                         int commentCount = Integer.parseInt(item.getString("commentCount"));
@@ -379,7 +379,7 @@ public class APIRequest {
         params.put("userID",userID);
         params.put("postText",postText);
         final ProgressDialog[] progress = new ProgressDialog[1];
-        client.post("http://www.dogaozkaraca.com/izu_network/API.php",params, new JsonHttpResponseHandler() {
+        client.post("localhost/Servidor_Instaterona/API.php",params, new JsonHttpResponseHandler() {
 
             @Override
             public void onStart() {
@@ -392,10 +392,10 @@ public class APIRequest {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject object)
             {
-                Log.w("izuNetworkO", object.toString());
+                Log.w("InstaMaromba", object.toString());
                 try {
                     String result = object.getString("result");
-                    Log.w("izuNetwork",result);
+                    Log.w("InstaMaromba",result);
                     Toast.makeText(ct,result,Toast.LENGTH_LONG);
 
                 } catch (JSONException e) {

@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="Adı Soyadı"
+        android:text="Nome Sobrenome"
         android:textColor="#EEEEEE"
         android:id="@+id/textViewFullName"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />

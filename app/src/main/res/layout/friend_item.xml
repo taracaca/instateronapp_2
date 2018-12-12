@@ -33,7 +33,7 @@
     <TextView
         android:id="@+id/fullname"
         android:layout_width="wrap_content"
-        android:text="Adı Soyadı"
+        android:text="Nome"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:gravity="left|center"
@@ -46,7 +46,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Arkadaşlıktan\nÇıkar"
+        android:text="De amigos \ Interesse"
         android:textColor="#FF0000"
         android:layout_alignParentRight="true"
 

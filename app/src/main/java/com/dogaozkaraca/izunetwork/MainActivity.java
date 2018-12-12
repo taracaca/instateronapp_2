@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        this.getSupportActionBar().setTitle("Ana Sayfa");
+        this.getSupportActionBar().setTitle("Home page");
         fragmentManager = getFragmentManager();
 
         fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -88,12 +88,12 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 //        .setAction("Action", null).show();
-                if (getSupportActionBar().getTitle().equals("Gruplar"))
+                if (getSupportActionBar().getTitle().equals("Grupos"))
                 {
                     CreateGroup_Dialog dialog = new CreateGroup_Dialog(MainActivity.this);
                     dialog.show();
                 }
-                else if (getSupportActionBar().getTitle().equals("Arkadaşlar"))
+                else if (getSupportActionBar().getTitle().equals("Amigos"))
                 {
 
                 }
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity
         profile_header.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.this.getSupportActionBar().setTitle("Profilim");
+                MainActivity.this.getSupportActionBar().setTitle("Meu Perfil");
                 actionItem.setIcon(R.drawable.ic_mode_edit_white_48dp);
                 drawer.closeDrawers();
                 fragmentManager.beginTransaction()
@@ -182,9 +182,9 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_notifications) {
-            if(this.getSupportActionBar().getTitle().equals("Bildirimler"))
+            if(this.getSupportActionBar().getTitle().equals("Notificações"))
             {
-                this.getSupportActionBar().setTitle("Ana Sayfa");
+                this.getSupportActionBar().setTitle("Home page");
                 item.setIcon(R.drawable.ic_notifications_white_48dp);
                 // update the main content by replacing fragments
                 fragmentManager.beginTransaction()
@@ -197,10 +197,10 @@ public class MainActivity extends AppCompatActivity
 
 
             }
-            else if(this.getSupportActionBar().getTitle().equals("Profilim"))
+                else if(this.getSupportActionBar().getTitle().equals("Meu Perfil"))
             {
                 //Launch Profile Editor
-                this.getSupportActionBar().setTitle("Profilimi Düzenle");
+                this.getSupportActionBar().setTitle("Editar meu perfil");
                 item.setIcon(R.drawable.ic_done_white_48dp);
                 fragmentManager.beginTransaction()
                         .replace(R.id.viewHolderContainer, profileedit_frag)
@@ -211,11 +211,11 @@ public class MainActivity extends AppCompatActivity
 
 
             }
-            else if(this.getSupportActionBar().getTitle().equals("Profilimi Düzenle"))
+            else if(this.getSupportActionBar().getTitle().equals("Editar meu perfil"))
             {
                 //Launch Profile Editor
                 item.setIcon(R.drawable.ic_mode_edit_white_48dp);
-                this.getSupportActionBar().setTitle("Profilim");
+                this.getSupportActionBar().setTitle("Meu Perfil");
                 fragmentManager.beginTransaction()
                         .replace(R.id.viewHolderContainer, profile_frag)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
@@ -226,7 +226,7 @@ public class MainActivity extends AppCompatActivity
             }
             else
             {
-                this.getSupportActionBar().setTitle("Bildirimler");
+                this.getSupportActionBar().setTitle("Notificações");
                 item.setIcon(R.drawable.ic_home_white_48dp);
                 // update the main content by replacing fragments
                 fragmentManager.beginTransaction()
@@ -253,7 +253,7 @@ public class MainActivity extends AppCompatActivity
         actionItem.setIcon(R.drawable.ic_notifications_white_48dp);
         if (id == R.id.home)
         {
-            this.getSupportActionBar().setTitle("Ana Sayfa");
+            this.getSupportActionBar().setTitle("Home Page");
             // update the main content by replacing fragments
             fragmentManager.beginTransaction()
                     .replace(R.id.viewHolderContainer, anasayfa_frag)
@@ -265,7 +265,7 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.friends)
         {
-            this.getSupportActionBar().setTitle("Arkadaşlar");
+            this.getSupportActionBar().setTitle("Amigos");
             // update the main content by replacing fragments
             fragmentManager.beginTransaction()
                     .replace(R.id.viewHolderContainer, friends_frag)
@@ -278,7 +278,7 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.groups)
         {
-            this.getSupportActionBar().setTitle("Gruplar");
+            this.getSupportActionBar().setTitle("Grupos");
             // update the main content by replacing fragments
             fragmentManager.beginTransaction()
                     .replace(R.id.viewHolderContainer, groups_frag)
@@ -290,7 +290,7 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.settings)
         {
-            this.getSupportActionBar().setTitle("Ayarlar");
+            this.getSupportActionBar().setTitle("configurações");
             // update the main content by replacing fragments
             fragmentManager.beginTransaction()
                     .replace(R.id.viewHolderContainer, settings_frag)
@@ -301,7 +301,7 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.admin_panel)
         {
-            this.getSupportActionBar().setTitle("Admin Kontrol Paneli");
+            this.getSupportActionBar().setTitle("Painel de Controle do Administrador\n");
             // update the main content by replacing fragments
             fragmentManager.beginTransaction()
                     .replace(R.id.viewHolderContainer, admin_frag)

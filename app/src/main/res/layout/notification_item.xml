@@ -34,7 +34,7 @@
     <TextView
         android:id="@+id/notificationDetail"
         android:layout_width="wrap_content"
-        android:text="Adı Soyadı , bir gönderini beğendi."
+        android:text="Nome gostou de uma publicação."
         android:layout_marginLeft="10dp"
         android:gravity="left|center"
         android:textSize="16sp"
@@ -46,7 +46,7 @@
     <TextView
         android:id="@+id/notification_time"
         android:layout_width="wrap_content"
-        android:text="52 dk önce."
+        android:text="52 minutos atrás."
         android:layout_marginRight="5dp"
         android:layout_marginTop="2dp"
         android:gravity="left|center"

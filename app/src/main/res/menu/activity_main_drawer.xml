@@ -5,23 +5,23 @@
         <item
             android:id="@+id/home"
             android:icon="@drawable/ic_home_black_48dp"
-            android:title="Ana Sayfa" />
+            android:title="Home page" />
         <item
             android:id="@+id/friends"
             android:icon="@drawable/ic_people_outline_black_48dp"
-            android:title="Arkadaşlarım" />
+            android:title="Amigos" />
         <item
             android:id="@+id/groups"
             android:icon="@drawable/ic_group_white_48dp"
-            android:title="Gruplar" />
+            android:title="Grupos" />
         <item
             android:id="@+id/settings"
             android:icon="@drawable/ic_settings_black_48dp"
-            android:title="Ayarlar" />
+            android:title="Configurações" />
         <item
             android:id="@+id/admin_panel"
             android:icon="@drawable/ic_person_black_48dp"
-            android:title="\u2605Admin Paneli\u2605" />
+            android:title="Painel de administração" />
     </group>
 
 

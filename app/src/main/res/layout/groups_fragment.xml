@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Hiç grup oluşturmadınız yada katılmadınız!"
+        android:text="Você nunca criou ou se juntou a um grupo!"
         android:id="@+id/nogroupstext"
         android:gravity="center"
         android:layout_alignParentTop="true"
